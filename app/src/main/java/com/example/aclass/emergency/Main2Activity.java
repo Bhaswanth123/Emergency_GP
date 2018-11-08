@@ -118,7 +118,7 @@ public class Main2Activity extends AppCompatActivity {
             }
             return;
         }
-        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 3000, 3, locationListener);
+        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 5000, 10, locationListener);
 
     }
 
@@ -155,14 +155,14 @@ public class Main2Activity extends AppCompatActivity {
     {
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
 
-                locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 3000, 3, locationListener);
+                locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 5000, 10, locationListener);
         }
         else
             Toast.makeText(this, "Location Permission not granted", Toast.LENGTH_SHORT).show();
     }
     private void sendMessage(String map_url)
     {
-        if(checkPermission(Manifest.permission.SEND_SMS)==false)
+        if(!checkPermission(Manifest.permission.SEND_SMS))
         {
             ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.SEND_SMS},SEND_SMS_PERMISSION_REQUEST_CODE);
         }
