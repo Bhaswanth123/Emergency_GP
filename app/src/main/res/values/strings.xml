@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">EMERGENCY SERVICES</string>
+    <string name="enter_your_name">Enter your Name</string>
+    <string name="submit">submit</string>
+    <string name="todo">TODO</string>
+    <string name="family_member_s_phone">Family member\'s Phone</string>
+    <string name="enter_your_number">Enter your Number</string>
+    <string name="skip">SKIP</string>
+    <string name="fire">FIRE</string>
+    <string name="ambulance">Ambulance</string>
+    <string name="police">POLICE</string>
+    <string name="switch1">Location</string>
+
+
+</resources>
