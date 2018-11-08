@@ -118,7 +118,7 @@ public class Main2Activity extends AppCompatActivity {
             }
             return;
         }
-        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 5000, 10, locationListener);
+        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 10000, 30, locationListener);
 
     }
 
@@ -155,7 +155,7 @@ public class Main2Activity extends AppCompatActivity {
     {
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
 
-                locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 5000, 10, locationListener);
+                locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 10000, 30, locationListener);
         }
         else
             Toast.makeText(this, "Location Permission not granted", Toast.LENGTH_SHORT).show();
