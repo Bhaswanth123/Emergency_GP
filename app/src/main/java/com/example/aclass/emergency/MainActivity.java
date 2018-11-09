@@ -62,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                     String id=db.push().getKey();
+
                     EmerData emerData=new EmerData(id,Name,Ph,Fph);
 
                      db.child(id).setValue(emerData);
@@ -69,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
 
                     Intent intent = new Intent(MainActivity.this, Main2Activity.class);
                     Bundle extras = new Bundle();
+                    extras.putString("Id",id);
                     extras.putString("Family", Fph);
                     extras.putString("Name", Name);
                     intent.putExtras(extras);

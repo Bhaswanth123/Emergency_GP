@@ -25,7 +25,7 @@ import android.widget.Toast;
 public class Main2Activity extends AppCompatActivity {
 
     Button fire, police, ambulance;
-    String Name;
+    String Name,id;
     String destination;
     View v;
     Switch Location_Switch;
@@ -58,6 +58,7 @@ public class Main2Activity extends AppCompatActivity {
         Intent i = getIntent();
         destination = i.getStringExtra("Family");
         Name = i.getStringExtra("Name");
+        id=i.getStringExtra("Id");
         Location_Switch = (Switch) findViewById(R.id.location);
 
         fire.setOnClickListener(new View.OnClickListener() {

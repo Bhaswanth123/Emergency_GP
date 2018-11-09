@@ -6,6 +6,8 @@ public class EmerData {
     String name;
     String phone;
     String fphone;
+    String Latitude;
+    String Longitude;
 
     public EmerData()
     {
@@ -33,5 +35,11 @@ public class EmerData {
 
     public String getFphone() {
         return fphone;
+    }
+
+    void setLocation(String Latitude,String Longitude)
+    {
+        this.Latitude=Latitude;
+        this.Longitude=Longitude;
     }
 }
